@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revenu Menage</title>
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+</head>
+
+<body>
+    <h1>Personnes :</h1>
+    <div class="total">
+        <div class="eleve0">
+            <h2> Eleves : </h2>
+            <div class="eleve1">
+                {% for p in personnes %}
+                <div>
+                    <h2>Name : {{p.name}}</h2>
+                    <h2>Age : {{p.age}}</h2>
+                    <h2>Salaire : {{p.salaire}}</h2>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <!-- <h2> Profs : </h2>
+    {% for p in prof %}
+    <h2>Name : {{p.name}}</h2>
+    <h2>Cours : {{p.cours}}</h2>
+    <h2> ------------------------- </h2>
+    {% endfor %} -->
+    </div>
+</body>
+
+</html>

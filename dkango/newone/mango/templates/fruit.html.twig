@@ -1,0 +1,25 @@
+
+    {% include 'header.html.twig' %}
+
+    <section id='base'>
+        {% block body %}
+        
+            {% for f in fruit%}
+                <h1>
+                    {{f.name}}
+                </h1>
+            {% endfor %}
+
+            <h1>form</h1>
+            <form action="" method="POST">
+                {{ form.as_p }}
+                {% csrf_token %}
+                <input type="submit" value="register">
+        </form>
+
+        {% endblock %}
+    </section>
+
+
+    {% include 'footer.html.twig' %}
+
